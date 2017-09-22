@@ -1,6 +1,8 @@
 import React from 'react';
 import { Grid, Row, Col, Button } from 'react-bootstrap';
+import { connect } from 'react-redux';
 import c from './../constants';
+import PropTypes from 'prop-types';
 
 class Roll4Strengths extends React.Component {
 
@@ -34,19 +36,23 @@ class Roll4Strengths extends React.Component {
     const charisma = attributesArr[5];
 
     const { _race, _class } = this.refs;
-    const { dispatch } = this.props;
-    const action = {
-      type: c.FINALIZE_CHARACTER,
-      race: _race.value,
-      class: _class.value,
-      strength: strength,
-      dexterity: dexterity,
-      constitution: constitution,
-      intellect: intellect,
-      wisdom: wisdom,
-      charisma: charisma
+    let action = null;
+    if (_race.value !== 'Select a Race' && _class.value !== 'Select a Class') {
+      const { dispatch } = this.props;
+      action = {
+        type: c.FINALIZE_CHARACTER,
+        id: this.props.characterList[0].id,
+        race: _race.value,
+        class: _class.value,
+        strength: strength,
+        dexterity: dexterity,
+        constitution: constitution,
+        intellect: intellect,
+        wisdom: wisdom,
+        charisma: charisma
+      }
     }
-    console.log(action);
+    dispatch(action);
   }
 
   render() {
@@ -57,8 +63,8 @@ class Roll4Strengths extends React.Component {
             <Grid>
               <Row>
                 <Col md={4}>
+                  <label>Race:</label>
                   <select ref="_race">
-                    <option disabled selected>Select a Race</option>
                     <option value="aasimar">Aasimar</option>
                     <option value="dragonborn">Dragonborn</option>
                     <option value="elf">Elf</option>
@@ -73,8 +79,8 @@ class Roll4Strengths extends React.Component {
                   </select>
                 </Col>
                 <Col md={4}>
+                  <label>Class:</label>
                   <select ref="_class">
-                    <option disabled selected>Select a Class</option>
                     <option value="barbarian">Barbarian</option>
                     <option value="bard">Bard</option>
                     <option value="cleric">Cleric</option>
@@ -101,4 +107,8 @@ class Roll4Strengths extends React.Component {
   }
 }
 
-export default Roll4Strengths;
+Roll4Strengths.propTypes = {
+  characterList: PropTypes.array.isRequired,
+}
+
+export default connect()(Roll4Strengths);

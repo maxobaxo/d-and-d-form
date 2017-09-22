@@ -29,4 +29,8 @@ describe('Character Alignment Reducer', () => {
     expect(alignModalReducer(false, { type: c.SHOW_ALIGN_MODAL})).toEqual(true);
   });
 
+  test('should hide modal when form is submitted', () => {
+    expect(alignModalReducer(true, { type: c.HIDE_ALIGN_MODAL})).toEqual(false);
+  });
+
 });

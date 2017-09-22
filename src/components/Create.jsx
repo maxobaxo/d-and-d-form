@@ -1,5 +1,6 @@
 import React from 'react';
 import PrelimFormControl from './PrelimFormControl';
+import Roll4Strengths from './Roll4Strengths';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import c from './../constants';
@@ -48,6 +49,8 @@ class Create extends React.Component {
           isModalVisible={this.props.masterState.isModalVisible}
           isButtonHidden={this.props.masterState.isButtonHidden}
         />
+        <br/>
+        <Roll4Strengths/>
       </div>
     );
   }

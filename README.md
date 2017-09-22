@@ -6,7 +6,7 @@ by Max Scher
 
 * MVP: a single page that involves the following....
   * player rolls for ability scores.
-    * player rolls 6 dice (each with varying number of sides). Each die determines score for specific ability (Strength, Dexterity, Constitution, INtellect, Wisdom).
+    * player rolls 6 dice (each with varying number of sides). Each die determines score for specific ability (Strength, Dexterity, Constitution, Intellect, Wisdom, Charisma).
     * scores are saved to player profile.
   * user selects character's race from dropdown list.
     * the race selection updates the player profile with new ability scores.

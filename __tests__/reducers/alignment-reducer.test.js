@@ -25,4 +25,8 @@ describe('Character Alignment Reducer', () => {
     expect(alignReducer([], action)).toEqual([ characterInfo ]);
   });
 
+  test('should show modal when button is clicked', () => {
+    expect(alignModalReducer(false, { type: c.SHOW_ALIGN_MODAL})).toEqual(true);
+  });
+
 });

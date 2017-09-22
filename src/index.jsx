@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 
-import alignReducer from './reducers/main-reducer';
+import alignReducer from './reducers/align-reducer';
 import alignModalReducer from './reducers/align-modal-reducer';
 
 import { createStore } from 'redux';

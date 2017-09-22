@@ -4,7 +4,10 @@
   "description": "User can create a DandD5E character profile",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll",
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "lint": "eslint src/** src/**/**; exit 0"
   },
   "author": "Max Scher",
   "license": "ISC",

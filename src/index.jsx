@@ -14,7 +14,7 @@ import { HashRouter } from 'react-router-dom';
 const reducer = combineReducers({
   characterList: alignReducer,
   isModalVisible: alignModalReducer,
-  isButtonVisible: createButtonReducer
+  isButtonHidden: createButtonReducer
 });
 
 const store = createStore(reducer);

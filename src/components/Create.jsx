@@ -46,7 +46,7 @@ class Create extends React.Component {
           showFormModal={this.showFormModal}
           hideFormModal={this.hideFormModal}
           isModalVisible={this.props.masterState.isModalVisible}
-          isButtonVisible={this.props.masterState.isButtonVisible}
+          isButtonHidden={this.props.masterState.isButtonHidden}
         />
       </div>
     );

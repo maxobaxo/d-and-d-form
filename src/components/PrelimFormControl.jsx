@@ -5,12 +5,10 @@ import { Modal } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 function PrelimFormControl(props) {
-
+  console.log(props.isButtonHidden);
   return(
-    <div>
-      <Button
-        onClick={props.showFormModal}
-        disabled={props.isButtonVisible}>
+    <div hidden={props.isButtonHidden}>
+      <Button onClick={props.showFormModal}>
         Begin Character Creation
       </Button>
       <Modal
@@ -31,7 +29,7 @@ PrelimFormControl.propTypes = {
   showFormModal: PropTypes.func,
   hideFormModal: PropTypes.func,
   isModalVisible: PropTypes.bool,
-  isButtonVisible: PropTypes.bool,
+  isButtonHidden: PropTypes.bool,
   hideCreateButton: PropTypes.func
 }
 

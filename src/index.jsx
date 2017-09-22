@@ -2,10 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 
-import reducer from './reducers/main-reducer';
+import alignReducer from './reducers/main-reducer';
+import alignModalReducer from './reducers/align-modal-reducer';
+
 import { createStore } from 'redux';
+import { combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
+
+const reducer = combineReducers({
+  characterList: alignReducer,
+  isModalVisible: alignModalReducer
+});
 
 const store = createStore(reducer);
 

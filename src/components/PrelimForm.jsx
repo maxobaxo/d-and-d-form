@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import c from './../../constants';
+import c from './../constants';
 import { v4 } from 'uuid';
+import PropTypes from 'prop-types';
 
 class PrelimForm extends React.Component {
 
@@ -22,6 +23,7 @@ class PrelimForm extends React.Component {
     };
     console.log(action);
     dispatch(action);
+    this.props.hideFormModal();
   }
 
   render() {
@@ -44,6 +46,10 @@ class PrelimForm extends React.Component {
       </div>
     );
   }
+}
+
+PrelimForm.propTypes = {
+  hideFormModal: PropTypes.func
 }
 
 export default connect()(PrelimForm);

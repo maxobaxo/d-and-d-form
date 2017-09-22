@@ -7,6 +7,7 @@ export default (state = [], action) => {
         alignment = 'true neutral';
       }
       return [
+        ...state,
         {
           id: id,
           name: name,

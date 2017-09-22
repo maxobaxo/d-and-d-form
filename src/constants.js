@@ -1,0 +1,5 @@
+export default {
+  ALIGN : 'ALIGN',
+  SHOW_ALIGN_MODAL : 'SHOW_ALIGN_MODAL',
+  HIDE_ALIGN_MODAL : 'HIDE_ALIGN_MODAL'
+};

@@ -1,5 +1,5 @@
 import React from 'react';
-import PrelimForm from './PrelimForm';
+import PrelimFormControl from './PrelimFormControl';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -12,7 +12,7 @@ class Create extends React.Component {
   render() {
     return(
       <div>
-        <PrelimForm/>
+        <PrelimFormControl/>
       </div>
     );
   }

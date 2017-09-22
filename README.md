@@ -10,7 +10,7 @@ by Max Scher
 * It can allow player to choose a race and class for their character, separately from submitting their name and alignment.
 * It can simulate the rolling of 6 dice (4-sided, 6-sided, 8-sided, 10-sided, 12-sided, and 20-sided) and randomly assign the resulting numbers to the character's attributes (i.e. strength, intelligence, etc.)
 
-
+### Here are some notes I sketched out at the beginning of the day...
 * MVP: a single page that involves the following....
   * player rolls for ability scores.
     * player rolls 6 dice (each with varying number of sides). Each die determines score for specific ability (Strength, Dexterity, Constitution, Intellect, Wisdom, Charisma).
@@ -20,6 +20,11 @@ by Max Scher
   * user selects class from dropdown list
     * the class selection adds values for player profile stats: primary stat, hit die, saving throw proficiencies, armor & weapon proficiencies.
     * the class selection adds values to player profile for level one features and proficiency bonus.
+
+* Wish List:
+  * Race/Class should influence points assigned to each attribute.
+  * Additional page for Armor choices.
+  * Additional page for classes.
   * user decides on a background from drop-down list
     * the bg selection adds value to player-profile for background
     * user then must select from list for each of the following:
@@ -30,7 +35,3 @@ by Max Scher
       * proficiencies
       * feature
   * User clicks a submit button and the final results of their player profile are revealed to them, perhaps with a picture of a potential avatar.
-
-* Wish List:
-  * Additional page for Armor choices
-  * Additional page for classes.

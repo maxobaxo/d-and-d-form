@@ -1,8 +1,15 @@
-# Free Form React-Redux Project
+# D&D Character Creator
 by Max Scher
 
-## Planning
-* I've chosen to attempt to create an app that allows users to create their own Dungeons & Dragons character.
+## Process
+* Spent a great deal of time pouring over concepts from the last two weeks: react components, passing props, lifting state, flux architecture, redux and all its moving pieces (actions, reducers, and store), jest testing, and react-bootstrap.
+* I chose a project that would provide opportunities to demonstrate my knowledge of and versatility with the concepts and tools introduced over the last two weeks.
+
+## Specifications
+* It can allow player to submit their name and select their alignment.
+* It can allow player to choose a race and class for their character, separately from submitting their name and alignment.
+* It can simulate the rolling of 6 dice (4-sided, 6-sided, 8-sided, 10-sided, 12-sided, and 20-sided) and randomly assign the resulting numbers to the character's attributes (i.e. strength, intelligence, etc.)
+
 
 * MVP: a single page that involves the following....
   * player rolls for ability scores.

@@ -10,6 +10,15 @@ class Create extends React.Component {
     super(props);
     this.showFormModal = this.showFormModal.bind(this);
     this.hideFormModal = this.hideFormModal.bind(this);
+    this.hideCreateButton
+  }
+
+  hideCreateButton() {
+    const { dispatch } = this.props;
+    const action = {
+      type: c.HIDE_CREATE_BUTTON
+    }
+    dispatch(action);
   }
 
   showFormModal(event) {
@@ -19,6 +28,7 @@ class Create extends React.Component {
       type: c.SHOW_ALIGN_MODAL
     }
     dispatch(action);
+    this.hideCreateButton();
   }
 
   hideFormModal() {
@@ -36,6 +46,7 @@ class Create extends React.Component {
           showFormModal={this.showFormModal}
           hideFormModal={this.hideFormModal}
           isModalVisible={this.props.masterState.isModalVisible}
+          isButtonVisible={this.props.masterState.isButtonVisible}
         />
       </div>
     );

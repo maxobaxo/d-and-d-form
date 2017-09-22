@@ -8,7 +8,9 @@ function PrelimFormControl(props) {
 
   return(
     <div>
-      <Button onClick={props.showFormModal}>
+      <Button
+        onClick={props.showFormModal}
+        disabled={props.isButtonVisible}>
         Begin Character Creation
       </Button>
       <Modal
@@ -28,7 +30,9 @@ function PrelimFormControl(props) {
 PrelimFormControl.propTypes = {
   showFormModal: PropTypes.func,
   hideFormModal: PropTypes.func,
-  isModalVisible: PropTypes.bool
+  isModalVisible: PropTypes.bool,
+  isButtonVisible: PropTypes.bool,
+  hideCreateButton: PropTypes.func
 }
 
 export default PrelimFormControl;

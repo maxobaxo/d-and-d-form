@@ -50,7 +50,8 @@ class Create extends React.Component {
           isButtonHidden={this.props.masterState.isButtonHidden}
         />
         <br/>
-        <Roll4Strengths/>
+        <Roll4Strengths
+          characterList={this.props.masterState.characterList}/>
       </div>
     );
   }

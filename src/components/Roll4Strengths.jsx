@@ -36,9 +36,9 @@ class Roll4Strengths extends React.Component {
     const charisma = attributesArr[5];
 
     const { _race, _class } = this.refs;
+    const { dispatch } = this.props;
     let action = null;
     if (_race.value !== 'Select a Race' && _class.value !== 'Select a Class') {
-      const { dispatch } = this.props;
       action = {
         type: c.FINALIZE_CHARACTER,
         id: this.props.characterList[0].id,

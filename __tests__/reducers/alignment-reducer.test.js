@@ -1,4 +1,5 @@
 import alignReducer from './../../src/reducers/align-reducer';
+import alignModalReducer from './../../src/reducers/align-modal-reducer';
 import c from './../../src/constants';
 
 describe('Character Alignment Reducer', () => {
@@ -13,6 +14,15 @@ describe('Character Alignment Reducer', () => {
     expect(alignReducer([], { type: null})).toEqual([]);
   });
 
-  
+  test('should add character to list array', () => {
+    const { name, alignment, id } = characterInfo;
+    action = {
+      type: c.ALIGN,
+      name: name,
+      alignment: alignment,
+      id: id
+    };
+    expect(alignReducer([], action)).toEqual([ characterInfo ]);
+  });
 
 });

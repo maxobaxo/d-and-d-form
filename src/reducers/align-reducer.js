@@ -1,11 +1,7 @@
 export default (state = [], action) => {
   switch (action.type) {
     case 'ALIGN':
-      const { id, name, morals, views } = action;
-      let alignment = views + ' ' + morals;
-      if (alignment === 'neutral neutral') {
-        alignment = 'true neutral';
-      }
+      const { id, name, alignment } = action;
       return [
         ...state,
         {

@@ -14,12 +14,12 @@ class PrelimForm extends React.Component {
   alignYourself() {
     const { _name, _views, _morals } = this.refs;
     const { dispatch } = this.props;
+    const alignment = _views.value + ' ' + _morals.value;
     const action = {
       type: c.ALIGN,
       id: v4(),
       name: _name.value,
-      morals: _morals.value,
-      views: _views.value
+      alignment: alignment
     };
     console.log(action);
     dispatch(action);

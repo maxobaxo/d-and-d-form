@@ -19,18 +19,32 @@ class Roll4Strengths extends React.Component {
   finalizeCharacter() {
     const dieValues = [this.rollDie(1, 5), this.rollDie(1, 7), this.rollDie(1, 9), this.rollDie(1, 11), this.rollDie(1, 13), this.rollDie(1, 21)];
 
+    const attributesArr = [];
+    for (var i = 0; i < 6; i++) {
+      let counter = Math.floor((Math.random() * dieValues.length) + 0);
+      attributesArr.push(dieValues[counter]);
+      dieValues.splice(counter, 1);
+    }
+
+    const strength = attributesArr[0];
+    const dexterity = attributesArr[1];
+    const constitution = attributesArr[2];
+    const intellect = attributesArr[3];
+    const wisdom = attributesArr[4];
+    const charisma = attributesArr[5];
+
     const { _race, _class } = this.refs;
     const { dispatch } = this.props;
     const action = {
       type: c.FINALIZE_CHARACTER,
       race: _race.value,
       class: _class.value,
-      strength: dieValues[0],
-      dexterity: dieValues[1],
-      constitution: dieValues[2],
-      intellect: dieValues[3],
-      wisdom: dieValues[4],
-      charisma: dieValues[5]
+      strength: strength,
+      dexterity: dexterity,
+      constitution: constitution,
+      intellect: intellect,
+      wisdom: wisdom,
+      charisma: charisma
     }
     console.log(action);
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import PrelimFormControl from './PrelimFormControl';
 import Roll4Strengths from './Roll4Strengths';
+import DisplayCharacter from './DisplayCharacter';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import c from './../constants';
@@ -52,6 +53,15 @@ class Create extends React.Component {
         <br/>
         <Roll4Strengths
           characterList={this.props.masterState.characterList}/>
+        {this.props.masterState.characterList.map((character) =>
+          <DisplayCharacter
+            name={character.name}
+            alignment={character.alignment}
+            race={character.race}
+            class={character.class}
+            key={character.id}
+          />
+        )}
       </div>
     );
   }

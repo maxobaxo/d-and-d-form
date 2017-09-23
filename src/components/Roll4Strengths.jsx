@@ -56,6 +56,7 @@ class Roll4Strengths extends React.Component {
     const action2 = {
       type: c.SHOW_PROFILE
     }
+    dispatch(action2);
   }
 
   render() {

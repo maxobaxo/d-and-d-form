@@ -1,7 +1,7 @@
-export default (state = false, action) => {
+export default (state = true, action) => {
   switch (action.type) {
     case 'SHOW_PROFILE':
-      return true;
+      return false;
     default:
       return state;
   };

@@ -58,15 +58,17 @@ class Create extends React.Component {
           <Roll4Strengths
             characterList={this.props.masterState.characterList}/>
         </div>
-        {this.props.masterState.characterList.map((character) =>
-          <DisplayCharacter
-            name={character.name}
-            alignment={character.alignment}
-            race={character.race}
-            class={character.class}
-            key={character.id}
-          />
-        )}
+        <div hidden={this.props.masterState.isProfileUp}>
+          {this.props.masterState.characterList.map((character) =>
+            <DisplayCharacter
+              name={character.name}
+              alignment={character.alignment}
+              race={character.race}
+              class={character.class}
+              key={character.id}
+            />
+          )}
+        </div>
       </div>
     );
   }

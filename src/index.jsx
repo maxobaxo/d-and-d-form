@@ -6,6 +6,7 @@ import alignReducer from './reducers/align-reducer';
 import alignModalReducer from './reducers/align-modal-reducer';
 import createButtonReducer from './reducers/create-button-reducer';
 import showDiceReducer from './reducers/show-dice-reducer';
+import showProfileReducer from './reducers/show-profile-reducer';
 
 import { createStore } from 'redux';
 import { combineReducers } from 'redux';
@@ -16,7 +17,8 @@ const reducer = combineReducers({
   characterList: alignReducer,
   isModalVisible: alignModalReducer,
   isButtonHidden: createButtonReducer,
-  areDiceVisible: showDiceReducer
+  areDiceVisible: showDiceReducer,
+  isProfileUp: showProfileReducer
 });
 
 const store = createStore(reducer);

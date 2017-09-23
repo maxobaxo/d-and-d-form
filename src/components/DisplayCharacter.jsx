@@ -5,8 +5,14 @@ function DisplayCharacter(props) {
 
   return(
     <div className="well">
-      <h3>Name: {props.name}</h3>
-      <p>{props.race} {props.class}</p>
+      <h3>{props.name}</h3>
+      <h4>{props.race} {props.class}</h4>
+      <p>Strength: {props.strength}</p>
+      <p>Dexterity: {props.dexterity}</p>
+      <p>Constitution: {props.constitution}</p>
+      <p>Intellect: {props.intellect}</p>
+      <p>Wisdom: {props.wisdom}</p>
+      <p>Charisma: {props.charisma}</p>
     </div>
   )
 }

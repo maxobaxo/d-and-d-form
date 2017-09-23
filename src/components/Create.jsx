@@ -64,6 +64,12 @@ class Create extends React.Component {
               name={character.name}
               alignment={character.alignment}
               race={character.race}
+              strength={character.strength}
+              dexterity={character.dexterity}
+              constitution={character.constitution}
+              intellect={character.intellect}
+              wisdom={character.wisdom}
+              charisma={character.charisma}
               class={character.class}
               key={character.id}
             />

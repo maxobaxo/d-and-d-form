@@ -65,6 +65,7 @@ class Roll4Strengths extends React.Component {
         <div className="well">
           <form onSubmit={this.finalizeCharacter}>
             <Grid>
+              <h4>Choose Your Race and Class:</h4>
               <Row>
                 <Col md={4}>
                   <label>Race:</label>
@@ -75,8 +76,8 @@ class Roll4Strengths extends React.Component {
                     <option value="Genasi">Genasi</option>
                     <option value="Gnome">Gnome</option>
                     <option value="Goliath">Goliath</option>
-                    <option value="Half-elf">Half-Elf</option>
-                    <option value="Half-orc">Half-Orc</option>
+                    <option value="Half-Elf">Half-Elf</option>
+                    <option value="Half-Orc">Half-Orc</option>
                     <option value="Halfling">Halfling</option>
                     <option value="Human">Human</option>
                     <option value="Tiefling">Tiefling</option>

@@ -30,11 +30,13 @@ class PrelimForm extends React.Component {
       <div>
         <form onSubmit={this.alignYourself}>
           <input ref="_name" type="text" placeholder="Name"/>
+          <label>Select Views: </label>
           <select ref="_views">
             <option value="Lawful">Lawful</option>
             <option value="Neutral">Neutral</option>
             <option value="Chaotic">Chaotic</option>
           </select>
+          <label>Select Morals: </label>
           <select ref="_morals">
             <option value="Good">Good</option>
             <option value="Neutral">Neutral</option>

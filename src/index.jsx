@@ -5,6 +5,7 @@ import App from './components/App';
 import alignReducer from './reducers/align-reducer';
 import alignModalReducer from './reducers/align-modal-reducer';
 import createButtonReducer from './reducers/create-button-reducer';
+import showDiceReducer from './reducers/show-dice-reducer';
 
 import { createStore } from 'redux';
 import { combineReducers } from 'redux';
@@ -14,7 +15,8 @@ import { HashRouter } from 'react-router-dom';
 const reducer = combineReducers({
   characterList: alignReducer,
   isModalVisible: alignModalReducer,
-  isButtonHidden: createButtonReducer
+  isButtonHidden: createButtonReducer,
+  areDiceVisible: showDiceReducer
 });
 
 const store = createStore(reducer);

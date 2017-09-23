@@ -12,7 +12,6 @@ class Create extends React.Component {
     super(props);
     this.showFormModal = this.showFormModal.bind(this);
     this.hideFormModal = this.hideFormModal.bind(this);
-    this.hideCreateButton
   }
 
   hideCreateButton() {
@@ -20,7 +19,11 @@ class Create extends React.Component {
     const action = {
       type: c.HIDE_CREATE_BUTTON
     }
+    const action2 = {
+      type: c.SHOW_DICE
+    }
     dispatch(action);
+    dispatch(action2);
   }
 
   showFormModal(event) {
@@ -51,8 +54,10 @@ class Create extends React.Component {
           isButtonHidden={this.props.masterState.isButtonHidden}
         />
         <br/>
-        <Roll4Strengths
-          characterList={this.props.masterState.characterList}/>
+        <div hidden={this.props.masterState.areDiceVisible}>
+          <Roll4Strengths
+            characterList={this.props.masterState.characterList}/>
+        </div>
         {this.props.masterState.characterList.map((character) =>
           <DisplayCharacter
             name={character.name}
@@ -68,7 +73,6 @@ class Create extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
     masterState : state
   }

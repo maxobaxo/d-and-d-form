@@ -21,7 +21,6 @@ class PrelimForm extends React.Component {
       name: _name.value,
       alignment: alignment
     };
-    console.log(action);
     dispatch(action);
     this.props.hideFormModal();
   }
@@ -32,14 +31,14 @@ class PrelimForm extends React.Component {
         <form onSubmit={this.alignYourself}>
           <input ref="_name" type="text" placeholder="Name"/>
           <select ref="_views">
-            <option value="lawful">Lawful</option>
-            <option value="neutral">Neutral</option>
-            <option value="chaotic">Chaotic</option>
+            <option value="Lawful">Lawful</option>
+            <option value="Neutral">Neutral</option>
+            <option value="Chaotic">Chaotic</option>
           </select>
           <select ref="_morals">
-            <option value="good">Good</option>
-            <option value="neutral">Neutral</option>
-            <option value="evil">Evil</option>
+            <option value="Good">Good</option>
+            <option value="Neutral">Neutral</option>
+            <option value="Evil">Evil</option>
           </select>
           <button type="submit">Submit</button>
         </form>
